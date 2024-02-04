@@ -1,0 +1,108 @@
+@font-face {
+  font-family: britannic , 'montserrat', sans-serif;
+  src: url('../font/BRITANIC.TTF') format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: britannic;
+  }
+
+body {
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.autoComplete_wrapper {
+  width: 100%;
+}
+
+aside input {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border-bottom: 2px solid #b6b1aa !important;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  transition: 0.2s ease-out !important;
+}
+
+#autoComplete_list_1 {
+  scrollbar-color: #666666 ;
+}
+
+#autoComplete_list_1::-webkit-scrollbar {
+  width: 8px;
+}
+
+#autoComplete_list_1::-webkit-scrollbar-track {
+  background: rgba(33,33,33,.1);
+  border-radius: 10px;
+}
+
+#autoComplete_list_1::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 10px;
+  
+  }
+
+@keyframes fade-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.loader {
+  width: 175px;
+  height: 80px;
+  display: block;
+  margin: auto;
+  background-image: radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #FFF 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), linear-gradient(#FFF 50px, transparent 0);
+  background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+  background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';  
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-color: #5f5f5f transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
