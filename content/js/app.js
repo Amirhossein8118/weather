@@ -402,14 +402,20 @@ function CurrentData(cityValue) {
 }
 
 function showDate() {
-    let minute = now.getMinutes();
-    let hour = now.getHours();
     let date = now.getDate();
     let day = days[now.getDay()];
     let month = months[now.getMonth()];
     let year = now.getFullYear();
 
-    return `${day}'${month} ${date},${year},${hour}:${minute}`;
+    setInterval(() => {
+        let time = new Date().toLocaleTimeString([], {
+            hour : "2-digit",
+            minute : "2-digit",
+        })
+    }, 1000);
+
+
+    return `${day}'${month} ${date},${year},${time}`;
 }
 
 const autoCompleteJS = new autoComplete({
