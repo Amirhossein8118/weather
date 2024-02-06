@@ -407,15 +407,12 @@ function showDate() {
     let month = months[now.getMonth()];
     let year = now.getFullYear();
 
-    setInterval(() => {
-        let time = new Date().toLocaleTimeString([], {
-            hour : "2-digit",
-            minute : "2-digit",
-        })
-    }, 1000);
+    let time = new Date().toLocaleTimeString([], {
+        hour : "2-digit",
+        minute : "2-digit",
+    })
 
-
-    return `${day}'${month} ${date},${year},${time}`;
+    return `${day} ' ${month} ${date} , ${year} , ${time}`;
 }
 
 const autoCompleteJS = new autoComplete({
